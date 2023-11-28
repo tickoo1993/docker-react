@@ -15,5 +15,5 @@ deploy:
   app: "react-app"
   env: React-app-env
   on:
-      branches: main
+    branch: main
   edge: true # opt in to dpl v2
