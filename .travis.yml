@@ -10,8 +10,8 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: "$AWS_SECRET_KEY"
   bucket: "elasticbeanstalk-us-east-2-436382833053"
-  bucket-path: "docker-react"
-  region: "us-east-1"
-  app: "docker-react"
-  env: Docker-react-env-1
+  bucket-path: "react-app"
+  region: "us-east-2"
+  app: "react-app"
+  env: React-app-env
   edge: true # opt in to dpl v2
