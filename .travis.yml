@@ -14,4 +14,6 @@ deploy:
   region: "us-east-2"
   app: "react-app"
   env: React-app-env
+  on:
+      branches: main
   edge: true # opt in to dpl v2
