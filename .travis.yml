@@ -7,12 +7,13 @@ script:
   - docker run -e CI=true kartiktickoo/docker-react npm run test -- --coverage
 deploy:
   provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
+  bucket: elasticbeanstalk-us-east-1-436382833053
+  bucket-path: "docker-react"
   region: "us-east-1"
   app: "docker-react"
   env: Docker-react-env-1
-  bucket-name: elasticbeanstalk-us-east-1-436382833053
-  bucket-path: "docker-react"
   on:
     branch: main
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: "$AWS_SECRET_KEY"
+  edge: true # opt in to dpl v2
